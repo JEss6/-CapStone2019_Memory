@@ -242,7 +242,7 @@ public class Main2Activity extends AppCompatActivity
             int upRatingCount = 0;
             int myReviewCount = bikeList.get(i).getBike_review_count();
 
-            if (myRating == 0 || myReviewCount == 0){
+            if (myReviewCount == 0){
                 continue;
             }
             for (int j = 0; j < bikeList.size(); ++j){
@@ -363,6 +363,7 @@ public class Main2Activity extends AppCompatActivity
     }
 
     private void rankerAddMarker(final GoogleMap map, LatLng pos, String title, String context){
+
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(pos);
         markerOptions.title(title);
