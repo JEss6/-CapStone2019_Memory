@@ -195,8 +195,8 @@ public class CheckAllowActivity extends AppCompatActivity {
         protected Integer doInBackground(Integer... integers){
             OkHttpClient client = new OkHttpClient();
             MediaType mediaType = MediaType.parse("application/json");
-            fcm_title="대여 요청";
-            fcm_body=borrower+" 님의 자전거 대여 요청이 있습니다.";
+            //fcm_title="대여 요청";
+            //fcm_body=borrower+" 님의 자전거 대여 요청이 있습니다.";
             RequestBody body = RequestBody.create(mediaType, "{ \"to\" : \""+token+"\",\r\n\"priority\" : \"high\", \r\n\"notification\" : { \r\n\"body\" : \""+fcm_body+"\", \"title\" : \""+fcm_title+"\" }, \"data\" : { \"title\" : \""+fcm_title+"\", \"message\" : \""+fcm_body+"\" } }");
             Request request = new Request.Builder()
                     .url("https://fcm.googleapis.com/fcm/send")
